@@ -1,3 +1,5 @@
+import BetaSignupForm from "./BetaSignupForm";
+
 export default function Home() {
   const workflow = [
     ["01", "Customer", "Keep the customer and job details together from the start."],
@@ -179,6 +181,37 @@ export default function Home() {
               <span>THE PRINCIPLE</span>
               <strong>Powerful underneath. Simple on the screen.</strong>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="beta-section" id="beta">
+        <div className="beta-grid">
+          <div className="beta-copy">
+            <p className="eyebrow">HELP SHAPE FIELD MANAGER</p>
+            <h2>PUT IT TO WORK.</h2>
+            <p className="beta-lead">
+              We&apos;re looking for a small group of real field-service businesses
+              to test the workflow, tell us where it gets in the way and help us
+              make Field Manager better before a wider release.
+            </p>
+
+            <div className="beta-expectations">
+              <div><span>01</span><strong>Use it like you work</strong><p>Try real customer-to-job workflows instead of a scripted demo.</p></div>
+              <div><span>02</span><strong>Tell us what feels rough</strong><p>Clear feedback matters more than saying everything looks good.</p></div>
+              <div><span>03</span><strong>Help shape what comes next</strong><p>Early testers help us see which improvements matter in the field.</p></div>
+            </div>
+          </div>
+
+          <div className="beta-form-wrap">
+            <div className="beta-form-heading">
+              <span className="industry-mark">FM</span>
+              <div>
+                <small>BETA TESTING</small>
+                <h3>Tell us about your work.</h3>
+              </div>
+            </div>
+            <BetaSignupForm />
           </div>
         </div>
       </section>
