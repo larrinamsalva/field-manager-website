@@ -118,6 +118,47 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="field-visibility-section">
+        <div className="field-visibility-heading">
+          <p className="eyebrow">FIELD VISIBILITY</p>
+          <h2>KNOW WHERE THE WORK IS MOVING.</h2>
+          <p>
+            Dispatch is more than assigning a job. Field Manager is being built to
+            connect the road, the worker and the job record so owners can keep the
+            day moving without chasing updates.
+          </p>
+        </div>
+
+        <div className="field-visibility-grid">
+          <article className="field-visibility-card">
+            <span className="field-status">WORKING FLOW</span>
+            <h3>Routing &amp; Drive Flow</h3>
+            <p>
+              Start Drive can open the route to the service address so the field
+              worker can move from dispatch toward the job with less switching around.
+            </p>
+          </article>
+
+          <article className="field-visibility-card">
+            <span className="field-status testing">IN TESTING</span>
+            <h3>Live Map</h3>
+            <p>
+              Live location and job-map tools are being tested to give owners a
+              clearer view of field activity while work is underway.
+            </p>
+          </article>
+
+          <article className="field-visibility-card">
+            <span className="field-status">CONNECTED RECORD</span>
+            <h3>Travel Time</h3>
+            <p>
+              Drive time can stay connected to time history, helping the workday
+              tell one continuous story from the road to the job.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section className="industries-section" id="industries">
         <div className="industries-heading">
           <p className="eyebrow">BUILT TO FLEX WITH THE WORK</p>
