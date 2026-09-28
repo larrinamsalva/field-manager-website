@@ -2,13 +2,48 @@ import BetaSignupForm from "./BetaSignupForm";
 
 export default function Home() {
   const workflow = [
-    ["01", "Customer", "Keep the customer and job details together from the start."],
-    ["02", "Estimate", "Build the work from your saved services and rates."],
-    ["03", "Schedule", "Turn approved work into a real job on the calendar."],
-    ["04", "Dispatch", "Assign the crew and get the right person to the right job."],
-    ["05", "Field Work", "Run the job, track the work and capture what happened."],
-    ["06", "Complete", "Finish the job with proof, approvals and closeout."],
-    ["07", "Records", "Keep the finished work connected to the business history."],
+    {
+      number: "01",
+      title: "Customer",
+      copy: "Keep the customer and job details together from the start.",
+      detail: "Store the customer, phone, service address, notes and job history in one place so the same information can carry forward into estimates, scheduling and completed work.",
+    },
+    {
+      number: "02",
+      title: "Estimate",
+      copy: "Build the work from your saved services and rates.",
+      detail: "Choose services from your master rate catalog, add quantities or hours, define the scope and build a clear total. An accepted estimate can move forward without rebuilding the job from scratch.",
+    },
+    {
+      number: "03",
+      title: "Schedule",
+      copy: "Turn approved work into a real job on the calendar.",
+      detail: "Choose the service, date and time, add access or job notes and create one-time or recurring work while keeping the saved service rate connected to the job.",
+    },
+    {
+      number: "04",
+      title: "Dispatch",
+      copy: "Assign the crew and get the right person to the right job.",
+      detail: "Connect the scheduled job to the field worker, move through assignment and acceptance, open the route when driving starts and keep the trip tied to the same work record.",
+    },
+    {
+      number: "05",
+      title: "Field Work",
+      copy: "Run the job, track the work and capture what happened.",
+      detail: "Give the worker the job details, checklist and field workflow they need while capturing before-and-after photos, notes and approved extra work as the job happens.",
+    },
+    {
+      number: "06",
+      title: "Complete",
+      copy: "Finish the job with proof, approvals and closeout.",
+      detail: "Bring the work to a clean finish with the final walkthrough, required proof, customer approval and the information needed to close out the job instead of leaving loose ends behind.",
+    },
+    {
+      number: "07",
+      title: "Records",
+      copy: "Keep the finished work connected to the business history.",
+      detail: "Preserve the completed job, price, photos, signatures and work history so owners can look back at what happened without searching through texts, paper notes or a camera roll.",
+    },
   ];
 
   const industries = [
@@ -103,12 +138,19 @@ export default function Home() {
         </div>
 
         <div className="workflow-track">
-          {workflow.map(([number, title, copy]) => (
-            <article className="workflow-card" key={title}>
-              <span className="workflow-number">{number}</span>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </article>
+          {workflow.map(({ number, title, copy, detail }) => (
+            <details className="workflow-card" key={title}>
+              <summary>
+                <span className="workflow-number">{number}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+                <span className="workflow-open" aria-hidden="true">OPEN +</span>
+              </summary>
+              <div className="workflow-detail">
+                <strong>What this does</strong>
+                <p>{detail}</p>
+              </div>
+            </details>
           ))}
         </div>
 
