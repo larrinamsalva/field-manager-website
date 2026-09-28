@@ -282,3 +282,67 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
   .workflow-card h3 { margin-top:20px; }
   .workflow-line { line-height:1.9; }
 }
+
+
+.industries-section {
+  width:min(1240px,calc(100% - 40px));
+  margin:0 auto;
+  padding:96px 0 110px;
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.industries-heading { max-width:800px; }
+.industries-heading h2 {
+  margin:0;
+  max-width:800px;
+  font-size:clamp(2.5rem,5vw,4.8rem);
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+.industries-heading > p:last-child {
+  max-width:690px;
+  margin:20px 0 0;
+  color:var(--fm-muted);
+  font-size:1rem;
+  line-height:1.7;
+}
+.industry-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:48px;
+}
+.industry-card {
+  min-height:190px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  background:linear-gradient(145deg,rgba(19,34,31,.9),rgba(9,17,15,.78));
+}
+.industry-mark {
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border:1px solid rgba(143,197,191,.5);
+  color:#9ac8c3;
+  font-size:.62rem;
+  font-weight:900;
+}
+.industry-card h3 { margin:26px 0 9px; font-size:1rem; }
+.industry-card p { margin:0; color:#9fb0ad; font-size:.8rem; line-height:1.55; }
+.industry-statement {
+  margin:34px 0 0;
+  color:#8fc5bf;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+@media (max-width:980px) {
+  .industry-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:640px) {
+  .industries-section { width:calc(100% - 28px); padding:72px 0 80px; }
+  .industry-grid { grid-template-columns:1fr; margin-top:34px; }
+  .industry-card { min-height:0; }
+}
