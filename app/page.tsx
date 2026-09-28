@@ -118,6 +118,27 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="job-proof-section">
+        <figure className="job-proof-photo">
+          <img
+            src="/field-manager-job-photos.webp"
+            alt="Field Manager user reviewing before and after job photos at a completed work site"
+          />
+        </figure>
+
+        <div className="job-proof-copy">
+          <p className="eyebrow">JOB PROOF</p>
+          <h2>SHOW THE WORK. KEEP THE PROOF.</h2>
+          <p>
+            Before and after photos stay connected to the job so the finished work
+            has a clear visual record instead of getting lost in a camera roll.
+          </p>
+          <div className="job-proof-points" aria-label="Job photo workflow">
+            <span>BEFORE</span><i>→</i><span>WORK</span><i>→</i><span>AFTER</span><i>→</i><span>RECORD</span>
+          </div>
+        </div>
+      </section>
+
       <section className="field-visibility-section">
         <div className="field-visibility-heading">
           <p className="eyebrow">FIELD VISIBILITY</p>
