@@ -1,4 +1,14 @@
 export default function Home() {
+  const workflow = [
+    ["01", "Customer", "Keep the customer and job details together from the start."],
+    ["02", "Estimate", "Build the work from your saved services and rates."],
+    ["03", "Schedule", "Turn approved work into a real job on the calendar."],
+    ["04", "Dispatch", "Assign the crew and get the right person to the right job."],
+    ["05", "Field Work", "Run the job, track the work and capture what happened."],
+    ["06", "Complete", "Finish the job with proof, approvals and closeout."],
+    ["07", "Records", "Keep the finished work connected to the business history."],
+  ];
+
   return (
     <main className="site-shell">
       <header className="site-header">
@@ -29,7 +39,7 @@ export default function Home() {
           </p>
           <div className="actions">
             <a className="button primary" href="#beta">Become a Beta Tester</a>
-            <a className="button secondary" href="#product">Explore Field Manager</a>
+            <a className="button secondary" href="#workflow">Explore Field Manager</a>
           </div>
           <p className="built-for">Built for the people who actually do the work.</p>
         </div>
@@ -67,6 +77,32 @@ export default function Home() {
             <span>ANY DEVICE</span>
           </div>
         </div>
+      </section>
+
+      <section className="workflow-section" id="workflow">
+        <div className="workflow-heading">
+          <p className="eyebrow">ONE CONNECTED WORKDAY</p>
+          <h2>FROM FIRST CALL TO FINISHED JOB.</h2>
+          <p>
+            Field Manager keeps the work moving forward instead of making your
+            team rebuild the same information at every step.
+          </p>
+        </div>
+
+        <div className="workflow-track">
+          {workflow.map(([number, title, copy]) => (
+            <article className="workflow-card" key={title}>
+              <span className="workflow-number">{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+
+        <p className="workflow-line">
+          Customer <span>→</span> Estimate <span>→</span> Schedule <span>→</span>
+          Dispatch <span>→</span> Field Work <span>→</span> Complete <span>→</span> Records
+        </p>
       </section>
     </main>
   );
