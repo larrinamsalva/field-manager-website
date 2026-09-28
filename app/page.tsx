@@ -139,6 +139,20 @@ export default function Home() {
 
         <p className="industry-statement">ANY FIELD. ANY ROAD. ANY BUSINESS.</p>
       </section>
+
+      <section className="automation-section" id="automation">
+        <div className="automation-heading">
+          <div><p className="eyebrow">THE NEXT LAYER</p><h2>LESS BUSYWORK. MORE CONTROL.</h2></div>
+          <span className="development-badge">IN DEVELOPMENT</span>
+        </div>
+        <p className="automation-intro">Field Manager&apos;s automation layer is planned to help owners move routine work forward while keeping important decisions in human hands.</p>
+        <div className="automation-grid">
+          <article className="automation-card"><span className="automation-label">COMING</span><h3>AI Assistant</h3><p>Ask for business information, prepare actions and work across the same connected Field Manager records.</p></article>
+          <article className="automation-card"><span className="automation-label">COMING</span><h3>Macros</h3><p>Turn repeatable multi-step routines into reusable workflows for everyday field operations.</p></article>
+          <article className="automation-card"><span className="automation-label">DESIGN PRINCIPLE</span><h3>Human Approval</h3><p>Consequential actions stay visible and confirmable instead of silently changing prices, payroll, charges or completed work.</p></article>
+        </div>
+        <p className="automation-note">Automation features shown here are part of the product roadmap and are not yet live.</p>
+      </section>
     </main>
   );
 }
