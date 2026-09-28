@@ -9,6 +9,17 @@ export default function Home() {
     ["07", "Records", "Keep the finished work connected to the business history."],
   ];
 
+  const industries = [
+    ["Contractors", "Jobs, crews, estimates and field records in one place."],
+    ["Cleaning", "Recurring visits, scheduled work and job closeout."],
+    ["Lawn & Property Care", "Route crews from scheduled service through completion."],
+    ["Handyman & Maintenance", "Keep customers, work details and proof connected."],
+    ["HVAC & Appliance", "Coordinate service calls, employees and job history."],
+    ["Plumbing & Electrical", "Move quoted work into scheduling and field execution."],
+    ["Delivery & Mobile Teams", "Organize assignments, travel and work in the field."],
+    ["Your Field", "A flexible foundation for businesses that work beyond a desk."],
+  ];
+
   return (
     <main className="site-shell">
       <header className="site-header">
@@ -103,6 +114,30 @@ export default function Home() {
           Customer <span>→</span> Estimate <span>→</span> Schedule <span>→</span>
           Dispatch <span>→</span> Field Work <span>→</span> Complete <span>→</span> Records
         </p>
+      </section>
+
+      <section className="industries-section" id="industries">
+        <div className="industries-heading">
+          <p className="eyebrow">BUILT TO FLEX WITH THE WORK</p>
+          <h2>YOUR BUSINESS DOESN&apos;T HAVE TO FIT A TEMPLATE.</h2>
+          <p>
+            Different industries do different work. Field Manager is being built
+            around the connected workflow they share: customers, jobs, people,
+            movement and records.
+          </p>
+        </div>
+
+        <div className="industry-grid">
+          {industries.map(([title, copy]) => (
+            <article className="industry-card" key={title}>
+              <span className="industry-mark">FM</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+
+        <p className="industry-statement">ANY FIELD. ANY ROAD. ANY BUSINESS.</p>
       </section>
     </main>
   );
