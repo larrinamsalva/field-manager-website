@@ -153,6 +153,35 @@ export default function Home() {
         </div>
         <p className="automation-note">Automation features shown here are part of the product roadmap and are not yet live.</p>
       </section>
+
+      <section className="about-section" id="about">
+        <div className="about-grid">
+          <div className="about-heading">
+            <p className="eyebrow">WHY FIELD MANAGER</p>
+            <h2>BUILT FROM THE WORK OUT.</h2>
+          </div>
+
+          <div className="about-story">
+            <p className="about-lead">
+              Field Manager is being shaped around a simple idea: business software
+              should follow the way real field work happens.
+            </p>
+            <p>
+              Customers, estimates, schedules, crews, travel, job details and
+              records belong to one connected story—not a pile of disconnected
+              tools that make people enter the same information again and again.
+            </p>
+            <p>
+              The goal is straightforward: give owners serious capability while
+              keeping the experience clear for the people using it in the field.
+            </p>
+            <div className="about-principle">
+              <span>THE PRINCIPLE</span>
+              <strong>Powerful underneath. Simple on the screen.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
