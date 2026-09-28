@@ -129,6 +129,17 @@ export default function Home() {
           </p>
         </div>
 
+        <figure className="field-visibility-photo">
+          <img
+            src="/field-manager-live-map.webp"
+            alt="Field Manager owner at the office reviewing crew locations and active jobs on a live map dashboard"
+          />
+          <figcaption>
+            <span>OFFICE VISIBILITY</span>
+            See crews, routes and active jobs from the office while the day is moving.
+          </figcaption>
+        </figure>
+
         <div className="field-visibility-grid">
           <article className="field-visibility-card">
             <span className="field-status">WORKING FLOW</span>
