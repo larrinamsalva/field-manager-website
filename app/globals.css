@@ -1061,7 +1061,13 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
   align-items:center;
   border-top:1px solid rgba(255,255,255,.09);
 }
+.job-proof-gallery {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
 .job-proof-photo {
+  position:relative;
   margin:0;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.12);
@@ -1075,6 +1081,29 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
   aspect-ratio:4 / 3;
   object-fit:cover;
   object-position:center;
+}
+.job-proof-photo figcaption {
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:10px;
+  padding:9px 10px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;
+  background:rgba(5,10,9,.8);
+  color:#e7efed;
+  font-size:.7rem;
+  font-weight:800;
+  line-height:1.35;
+  backdrop-filter:blur(8px);
+}
+.job-proof-photo figcaption span {
+  display:block;
+  margin-bottom:2px;
+  color:#8fc5bf;
+  font-size:.56rem;
+  font-weight:900;
+  letter-spacing:.12em;
 }
 .job-proof-copy h2 {
   margin:0;
@@ -1118,8 +1147,9 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
     gap:34px;
     padding:72px 0 80px;
   }
-  .job-proof-photo {
+  .job-proof-gallery {
     order:2;
+    grid-template-columns:1fr;
   }
   .job-proof-copy {
     order:1;
