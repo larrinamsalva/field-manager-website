@@ -7,42 +7,49 @@ export default function Home() {
       title: "Customer",
       copy: "Keep the customer and job details together from the start.",
       detail: "Store the customer, phone, service address, notes and job history in one place so the same information can carry forward into estimates, scheduling and completed work.",
+      points: ["Contact and service-address details", "Customer notes and job history", "Start scheduling from the customer record"],
     },
     {
       number: "02",
       title: "Estimate",
       copy: "Build the work from your saved services and rates.",
       detail: "Choose services from your master rate catalog, add quantities or hours, define the scope and build a clear total. An accepted estimate can move forward without rebuilding the job from scratch.",
+      points: ["Saved Services & Rates", "Multiple services with set pricing", "Scope, quantities and clear totals"],
     },
     {
       number: "03",
       title: "Schedule",
       copy: "Turn approved work into a real job on the calendar.",
       detail: "Choose the service, date and time, add access or job notes and create one-time or recurring work while keeping the saved service rate connected to the job.",
+      points: ["One-time or recurring jobs", "Service, date and time", "Job notes and access instructions"],
     },
     {
       number: "04",
       title: "Dispatch",
       copy: "Assign the crew and get the right person to the right job.",
       detail: "Connect the scheduled job to the field worker, move through assignment and acceptance, open the route when driving starts and keep the trip tied to the same work record.",
+      points: ["Assign the job to a field worker", "Accept and start the drive", "Route and travel-time connection"],
     },
     {
       number: "05",
       title: "Field Work",
       copy: "Run the job, track the work and capture what happened.",
       detail: "Give the worker the job details, checklist and field workflow they need while capturing before-and-after photos, notes and approved extra work as the job happens.",
+      points: ["Job details and work checklist", "Before-and-after photos", "Notes and approved extra work"],
     },
     {
       number: "06",
       title: "Complete",
       copy: "Finish the job with proof, approvals and closeout.",
       detail: "Bring the work to a clean finish with the final walkthrough, required proof, customer approval and the information needed to close out the job instead of leaving loose ends behind.",
+      points: ["Final walkthrough", "Customer approval and signature", "Job closeout and payment record"],
     },
     {
       number: "07",
       title: "Records",
       copy: "Keep the finished work connected to the business history.",
       detail: "Preserve the completed job, price, photos, signatures and work history so owners can look back at what happened without searching through texts, paper notes or a camera roll.",
+      points: ["Completed-job history", "Prices, photos and signatures", "One record for what happened"],
     },
   ];
 
@@ -138,7 +145,7 @@ export default function Home() {
         </div>
 
         <div className="workflow-track">
-          {workflow.map(({ number, title, copy, detail }) => (
+          {workflow.map(({ number, title, copy, detail, points }) => (
             <details className="workflow-card" name="workflow-step" key={title}>
               <summary>
                 <span className="workflow-number">{number}</span>
@@ -149,6 +156,9 @@ export default function Home() {
               <div className="workflow-detail">
                 <strong>What this does</strong>
                 <p>{detail}</p>
+                <div className="workflow-detail-list">
+                  {points.map((point) => <span key={point}>{point}</span>)}
+                </div>
               </div>
             </details>
           ))}
