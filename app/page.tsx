@@ -458,22 +458,44 @@ export default function Home() {
           <div className="about-heading">
             <p className="eyebrow">WHY FIELD MANAGER</p>
             <h2>BUILT FROM THE WORK OUT.</h2>
+            <p className="about-kicker">One customer. One job. One connected story.</p>
           </div>
 
           <div className="about-story">
             <p className="about-lead">
-              Field Manager is being shaped around a simple idea: business software
-              should follow the way real field work happens.
+              Real field work does not happen in neat little boxes. A customer calls,
+              an estimate becomes a job, somebody gets sent to the site, the work changes,
+              photos get taken, approvals happen and the finished job becomes part of the business record.
             </p>
             <p>
-              Customers, estimates, schedules, crews, travel, job details and
-              records belong to one connected story—not a pile of disconnected
-              tools that make people enter the same information again and again.
+              Field Manager is being built so those steps stay connected instead of
+              forcing owners and field workers to rebuild the same information across
+              separate calendars, messages, notes, photos and paperwork.
             </p>
             <p>
-              The goal is straightforward: give owners serious capability while
-              keeping the experience clear for the people using it in the field.
+              The goal is not to make a complicated system look impressive. The goal is
+              to put serious capability underneath a workflow that still feels clear when
+              somebody is standing in a driveway, riding to the next job or running the office.
             </p>
+
+            <div className="about-values" aria-label="What makes Field Manager different">
+              <div>
+                <span>01</span>
+                <strong>Connected by design</strong>
+                <p>Customer, estimate, schedule, dispatch, field work and records move forward as one workflow.</p>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>Flexible by trade</strong>
+                <p>The same foundation can adapt to different services instead of forcing every business into one template.</p>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>Human in control</strong>
+                <p>Automation is meant to remove busywork while important prices, approvals and business decisions stay visible.</p>
+              </div>
+            </div>
+
             <div className="about-principle">
               <span>THE PRINCIPLE</span>
               <strong>Powerful underneath. Simple on the screen.</strong>
