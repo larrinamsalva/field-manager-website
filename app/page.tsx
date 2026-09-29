@@ -244,8 +244,8 @@ export default function Home() {
 
         <figure className="field-visibility-photo">
           <img
-            src="/field-manager-live-map.webp"
-            alt="Field Manager owner at the office reviewing crew locations and active jobs on a live map dashboard"
+            src="/field-manager-crew-routes.webp"
+            alt="Field Manager live map showing crew routes, job locations and active field status"
           />
           <figcaption>
             <span>OFFICE VISIBILITY</span>
