@@ -54,14 +54,54 @@ export default function Home() {
   ];
 
   const industries = [
-    ["Contractors", "Jobs, crews, estimates and field records in one place."],
-    ["Cleaning", "Recurring visits, scheduled work and job closeout."],
-    ["Lawn & Property Care", "Route crews from scheduled service through completion."],
-    ["Handyman & Maintenance", "Keep customers, work details and proof connected."],
-    ["HVAC & Appliance", "Coordinate service calls, employees and job history."],
-    ["Plumbing & Electrical", "Move quoted work into scheduling and field execution."],
-    ["Delivery & Mobile Teams", "Organize assignments, travel and work in the field."],
-    ["Your Field", "A flexible foundation for businesses that work beyond a desk."],
+    {
+      title: "Contractors",
+      copy: "Jobs, crews, estimates and field records in one place.",
+      detail: "Field Manager is built to keep the office side and the field side connected from the first customer conversation through the finished job.",
+      points: ["Customer and job details", "Set-price estimates", "Scheduling and dispatch", "Crew and travel workflow", "Before-and-after job proof", "Completed work records"],
+    },
+    {
+      title: "Cleaning",
+      copy: "Recurring visits, scheduled work and job closeout.",
+      detail: "Cleaning businesses can keep repeat customers, service pricing, access notes and completed work tied to the same job flow instead of spreading the day across separate tools.",
+      points: ["Recurring customer visits", "Saved cleaning rates", "Access and job notes", "Cleaning work checklists", "Before-and-after photos", "Closeout and job history"],
+    },
+    {
+      title: "Lawn & Property Care",
+      copy: "Route crews from scheduled service through completion.",
+      detail: "For mobile lawn and property crews, the same customer, service address and scheduled work can travel with the team from the route to the finished record.",
+      points: ["Lawn and yard services", "Recurring property visits", "Service address routing", "Crew assignments", "Job photos and notes", "Completed property history"],
+    },
+    {
+      title: "Handyman & Maintenance",
+      copy: "Keep customers, work details and proof connected.",
+      detail: "Handyman and maintenance work often changes from job to job, so Field Manager keeps the scope flexible while still connecting pricing, scheduling, proof and closeout.",
+      points: ["Multiple services per estimate", "Saved service pricing", "Job and access notes", "Dispatch to the service address", "Approved extra work", "Photos and completion records"],
+    },
+    {
+      title: "HVAC & Appliance",
+      copy: "Coordinate service calls, employees and job history.",
+      detail: "Service-call businesses can use the connected workflow to organize the customer, appointment, technician movement, field notes and completed service record.",
+      points: ["Customer service history", "Quoted service work", "Appointment scheduling", "Technician dispatch", "Field notes and photos", "Completed service records"],
+    },
+    {
+      title: "Plumbing & Electrical",
+      copy: "Move quoted work into scheduling and field execution.",
+      detail: "Field Manager can keep quoted service work attached to the customer as it moves into scheduling, dispatch, job documentation and final records.",
+      points: ["Customer and site details", "Service estimates", "Scheduled appointments", "Worker and route assignment", "Job proof and notes", "Final work history"],
+    },
+    {
+      title: "Delivery & Mobile Teams",
+      copy: "Organize assignments, travel and work in the field.",
+      detail: "Teams that spend the day moving between locations can use the same connected structure for assignments, destinations, travel steps, proof and finished records.",
+      points: ["Daily assignments", "Destination details", "Worker acceptance", "Travel workflow", "Photos and field notes", "Completed assignment history"],
+    },
+    {
+      title: "Your Field",
+      copy: "A flexible foundation for businesses that work beyond a desk.",
+      detail: "The core workflow is intentionally broader than one trade. Businesses can build around their own services and rates while keeping customers, people, movement and records connected.",
+      points: ["Your own service catalog", "Your saved rates", "Customers and schedules", "Employees and dispatch", "Field proof and approvals", "Business records in one flow"],
+    },
   ];
 
   return (
@@ -309,12 +349,22 @@ export default function Home() {
         </div>
 
         <div className="industry-grid">
-          {industries.map(([title, copy]) => (
-            <article className="industry-card" key={title}>
-              <span className="industry-mark">FM</span>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </article>
+          {industries.map(({ title, copy, detail, points }) => (
+            <details className="industry-card" name="industry-step" key={title}>
+              <summary>
+                <span className="industry-mark">FM</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+                <span className="industry-card-open" aria-hidden="true">OPEN +</span>
+              </summary>
+              <div className="industry-detail">
+                <strong>How Field Manager fits</strong>
+                <p>{detail}</p>
+                <div className="industry-detail-list">
+                  {points.map((point) => <span key={point}>{point}</span>)}
+                </div>
+              </div>
+            </details>
           ))}
         </div>
 
