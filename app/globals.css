@@ -649,11 +649,29 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
 }
 .field-visibility-card {
   min-height:220px;
-  padding:24px;
+  padding:0;
   border:1px solid rgba(255,255,255,.1);
   border-radius:10px;
   background:linear-gradient(145deg,rgba(17,43,39,.88),rgba(9,17,15,.82));
+  transition:border-color .18s ease,background .18s ease,transform .18s ease;
 }
+.field-visibility-card:hover {
+  border-color:rgba(143,197,191,.32);
+  transform:translateY(-2px);
+}
+.field-visibility-card[open] {
+  grid-column:span 3;
+  border-color:rgba(143,197,191,.34);
+  background:linear-gradient(145deg,rgba(17,55,50,.94),rgba(8,22,20,.9));
+}
+.field-visibility-card summary {
+  min-height:218px;
+  padding:24px;
+  display:block;
+  cursor:pointer;
+  list-style:none;
+}
+.field-visibility-card summary::-webkit-details-marker { display:none; }
 .field-status {
   display:inline-flex;
   padding:7px 9px;
@@ -680,6 +698,51 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
   font-size:.86rem;
   line-height:1.62;
 }
+.field-card-open {
+  display:inline-flex;
+  margin-top:22px;
+  color:#8fc5bf;
+  font-size:0;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+.field-card-open::after { content:"OPEN +"; font-size:.6rem; }
+.field-visibility-card[open] .field-card-open::after { content:"CLOSE –"; }
+.field-card-detail {
+  margin:0 24px 24px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.field-card-detail > strong {
+  display:block;
+  margin-bottom:8px;
+  color:#dbe9e6;
+  font-size:.68rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.field-card-detail > p {
+  max-width:760px;
+  color:#b5c6c2;
+  font-size:.88rem;
+  line-height:1.65;
+}
+.field-card-list {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:16px;
+}
+.field-card-list span {
+  padding:10px 11px;
+  border:1px solid rgba(143,197,191,.18);
+  border-radius:8px;
+  background:rgba(11,95,90,.1);
+  color:#c6d7d3;
+  font-size:.72rem;
+  font-weight:800;
+  line-height:1.4;
+}
 @media (max-width:760px) {
   .field-visibility-section {
     width:calc(100% - 28px);
@@ -699,7 +762,10 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
     margin-top:34px;
   }
   .field-visibility-card { min-height:0; }
+  .field-visibility-card[open] { grid-column:span 1; }
+  .field-visibility-card summary { min-height:0; }
   .field-visibility-card h3 { margin-top:24px; }
+  .field-card-list { grid-template-columns:1fr; }
 }
 
 
