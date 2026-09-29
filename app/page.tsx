@@ -546,6 +546,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <figure className="about-photo">
+          <img
+            src="/field-manager-about-owner.webp"
+            alt="Field Manager owner reviewing crews and active jobs beside a live field map dashboard"
+          />
+          <figcaption>
+            <span>BUILT AROUND REAL FIELD WORK</span>
+            See the office, the crews and the jobs as one connected operation.
+          </figcaption>
+        </figure>
       </section>
 
       <section className="beta-section" id="beta">
