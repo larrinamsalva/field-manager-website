@@ -214,32 +214,86 @@ export default function Home() {
         </figure>
 
         <div className="field-visibility-grid">
-          <article className="field-visibility-card">
-            <span className="field-status">WORKING FLOW</span>
-            <h3>Routing &amp; Drive Flow</h3>
-            <p>
-              Start Drive can open the route to the service address so the field
-              worker can move from dispatch toward the job with less switching around.
-            </p>
-          </article>
+          <details className="field-visibility-card" name="field-visibility-step">
+            <summary>
+              <span className="field-status">WORKING FLOW</span>
+              <h3>Routing &amp; Drive Flow</h3>
+              <p>
+                Start Drive can open the route to the service address so the field
+                worker can move from dispatch toward the job with less switching around.
+              </p>
+              <span className="field-card-open" aria-hidden="true">OPEN +</span>
+            </summary>
+            <div className="field-card-detail">
+              <strong>What this does</strong>
+              <p>
+                The drive flow is built to keep the scheduled job, the worker and the
+                route connected instead of making the employee rebuild the trip in another tool.
+              </p>
+              <div className="field-card-list">
+                <span>Use the scheduled service address</span>
+                <span>Keep the assigned worker connected</span>
+                <span>Employee acceptance before travel</span>
+                <span>Start Drive from the job flow</span>
+                <span>Open the route to the service location</span>
+                <span>Carry the same job forward on arrival</span>
+              </div>
+            </div>
+          </details>
 
-          <article className="field-visibility-card">
-            <span className="field-status testing">IN TESTING</span>
-            <h3>Live Map</h3>
-            <p>
-              Live location and job-map tools are being tested to give owners a
-              clearer view of field activity while work is underway.
-            </p>
-          </article>
+          <details className="field-visibility-card" name="field-visibility-step">
+            <summary>
+              <span className="field-status testing">IN TESTING</span>
+              <h3>Live Map</h3>
+              <p>
+                Live location and job-map tools are being tested to give owners a
+                clearer view of field activity while work is underway.
+              </p>
+              <span className="field-card-open" aria-hidden="true">OPEN +</span>
+            </summary>
+            <div className="field-card-detail">
+              <strong>What is being tested</strong>
+              <p>
+                This layer is still under verification. The goal is an office view that
+                connects field location to the active job without pretending the map is finished before it is.
+              </p>
+              <div className="field-card-list">
+                <span>Field-location capture</span>
+                <span>Active-job map context</span>
+                <span>Connect location to the job record</span>
+                <span>Office view of field activity</span>
+                <span>Ongoing GPS update testing</span>
+                <span>Backend and access controls still being verified</span>
+              </div>
+            </div>
+          </details>
 
-          <article className="field-visibility-card">
-            <span className="field-status">CONNECTED RECORD</span>
-            <h3>Travel Time</h3>
-            <p>
-              Drive time can stay connected to time history, helping the workday
-              tell one continuous story from the road to the job.
-            </p>
-          </article>
+          <details className="field-visibility-card" name="field-visibility-step">
+            <summary>
+              <span className="field-status">CONNECTED RECORD</span>
+              <h3>Travel Time</h3>
+              <p>
+                Drive time can stay connected to time history, helping the workday
+                tell one continuous story from the road to the job.
+              </p>
+              <span className="field-card-open" aria-hidden="true">OPEN +</span>
+            </summary>
+            <div className="field-card-detail">
+              <strong>What this keeps together</strong>
+              <p>
+                Travel belongs to the workday too. Field Manager keeps that drive segment
+                connected to the same job history instead of leaving it as a separate guess later.
+              </p>
+              <div className="field-card-list">
+                <span>Start the travel step from Dispatch</span>
+                <span>Keep the destination tied to the job</span>
+                <span>Record the road portion of the workday</span>
+                <span>Transition from travel into the job</span>
+                <span>Keep drive time in Time History</span>
+                <span>Make later workday review clearer</span>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
