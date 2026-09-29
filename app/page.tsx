@@ -378,9 +378,77 @@ export default function Home() {
         </div>
         <p className="automation-intro">Field Manager&apos;s automation layer is planned to help owners move routine work forward while keeping important decisions in human hands.</p>
         <div className="automation-grid">
-          <article className="automation-card"><span className="automation-label">COMING</span><h3>AI Assistant</h3><p>Ask for business information, prepare actions and work across the same connected Field Manager records.</p></article>
-          <article className="automation-card"><span className="automation-label">COMING</span><h3>Macros</h3><p>Turn repeatable multi-step routines into reusable workflows for everyday field operations.</p></article>
-          <article className="automation-card"><span className="automation-label">DESIGN PRINCIPLE</span><h3>Human Approval</h3><p>Consequential actions stay visible and confirmable instead of silently changing prices, payroll, charges or completed work.</p></article>
+          <details className="automation-card" name="automation-step">
+            <summary>
+              <span className="automation-label">COMING</span>
+              <h3>AI Assistant</h3>
+              <p>Ask for business information, prepare actions and work across the same connected Field Manager records.</p>
+              <span className="automation-card-open" aria-hidden="true">OPEN +</span>
+            </summary>
+            <div className="automation-detail">
+              <strong>Planned capability</strong>
+              <p>
+                The AI Assistant is planned as a layer over the same Field Manager records,
+                helping owners understand information and prepare work without creating a separate AI-only system.
+              </p>
+              <div className="automation-detail-list">
+                <span>Ask questions about business records</span>
+                <span>Find customer or job information</span>
+                <span>Prepare routine actions for review</span>
+                <span>Help build schedules and follow-up steps</span>
+                <span>Work from the same connected data</span>
+                <span>Require confirmation for consequential actions</span>
+              </div>
+            </div>
+          </details>
+
+          <details className="automation-card" name="automation-step">
+            <summary>
+              <span className="automation-label">COMING</span>
+              <h3>Macros</h3>
+              <p>Turn repeatable multi-step routines into reusable workflows for everyday field operations.</p>
+              <span className="automation-card-open" aria-hidden="true">OPEN +</span>
+            </summary>
+            <div className="automation-detail">
+              <strong>Planned capability</strong>
+              <p>
+                Macros are planned to package the steps a business repeats all the time
+                so owners can run a familiar workflow without clicking through every step manually.
+              </p>
+              <div className="automation-detail-list">
+                <span>Schedule an accepted estimate</span>
+                <span>Prepare the morning dispatch</span>
+                <span>Set up a new recurring customer</span>
+                <span>Handle cancellations or address changes</span>
+                <span>Prepare end-of-day closeout</span>
+                <span>Build custom repeatable workflows</span>
+              </div>
+            </div>
+          </details>
+
+          <details className="automation-card" name="automation-step">
+            <summary>
+              <span className="automation-label">DESIGN PRINCIPLE</span>
+              <h3>Human Approval</h3>
+              <p>Consequential actions stay visible and confirmable instead of silently changing prices, payroll, charges or completed work.</p>
+              <span className="automation-card-open" aria-hidden="true">OPEN +</span>
+            </summary>
+            <div className="automation-detail">
+              <strong>How control stays with the owner</strong>
+              <p>
+                Automation should save steps without taking important decisions away from the business.
+                The plan is to keep high-impact changes visible before they become final.
+              </p>
+              <div className="automation-detail-list">
+                <span>No silent master-price changes</span>
+                <span>No silent payroll changes</span>
+                <span>No silent customer charges</span>
+                <span>No silent job deletions</span>
+                <span>No fake approvals or signatures</span>
+                <span>Review and confirm important actions</span>
+              </div>
+            </div>
+          </details>
         </div>
         <p className="automation-note">Automation features shown here are part of the product roadmap and are not yet live.</p>
       </section>
