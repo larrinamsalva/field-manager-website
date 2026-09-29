@@ -479,21 +479,65 @@ export default function Home() {
             </p>
 
             <div className="about-values" aria-label="What makes Field Manager different">
-              <div>
-                <span>01</span>
-                <strong>Connected by design</strong>
-                <p>Customer, estimate, schedule, dispatch, field work and records move forward as one workflow.</p>
-              </div>
-              <div>
-                <span>02</span>
-                <strong>Flexible by trade</strong>
-                <p>The same foundation can adapt to different services instead of forcing every business into one template.</p>
-              </div>
-              <div>
-                <span>03</span>
-                <strong>Human in control</strong>
-                <p>Automation is meant to remove busywork while important prices, approvals and business decisions stay visible.</p>
-              </div>
+              <details className="about-value-card" name="about-value">
+                <summary>
+                  <span className="about-value-number">01</span>
+                  <strong>Connected by design</strong>
+                  <p>Customer, estimate, schedule, dispatch, field work and records move forward as one workflow.</p>
+                  <span className="about-value-open" aria-hidden="true">OPEN +</span>
+                </summary>
+                <div className="about-value-detail">
+                  <strong>What that means</strong>
+                  <div className="about-value-list">
+                    <span>Customer details stay with the work</span>
+                    <span>Estimates can move into scheduling</span>
+                    <span>Scheduled jobs move into Dispatch</span>
+                    <span>Travel stays tied to the job</span>
+                    <span>Field proof stays with completion</span>
+                    <span>Finished work becomes business history</span>
+                  </div>
+                </div>
+              </details>
+
+              <details className="about-value-card" name="about-value">
+                <summary>
+                  <span className="about-value-number">02</span>
+                  <strong>Flexible by trade</strong>
+                  <p>The same foundation can adapt to different services instead of forcing every business into one template.</p>
+                  <span className="about-value-open" aria-hidden="true">OPEN +</span>
+                </summary>
+                <div className="about-value-detail">
+                  <strong>What that means</strong>
+                  <div className="about-value-list">
+                    <span>Build your own service catalog</span>
+                    <span>Use saved business rates</span>
+                    <span>Support one-time or recurring work</span>
+                    <span>Carry job-specific notes and scope</span>
+                    <span>Fit different field-service industries</span>
+                    <span>Keep one familiar workflow underneath</span>
+                  </div>
+                </div>
+              </details>
+
+              <details className="about-value-card" name="about-value">
+                <summary>
+                  <span className="about-value-number">03</span>
+                  <strong>Human in control</strong>
+                  <p>Automation is meant to remove busywork while important prices, approvals and business decisions stay visible.</p>
+                  <span className="about-value-open" aria-hidden="true">OPEN +</span>
+                </summary>
+                <div className="about-value-detail">
+                  <strong>What that means</strong>
+                  <div className="about-value-list">
+                    <span>Important actions stay reviewable</span>
+                    <span>Prices are not silently changed</span>
+                    <span>Customer charges stay visible</span>
+                    <span>Completed work is protected</span>
+                    <span>Approvals and signatures stay meaningful</span>
+                    <span>Automation assists instead of taking over</span>
+                  </div>
+                </div>
+              </details>
             </div>
 
             <div className="about-principle">
