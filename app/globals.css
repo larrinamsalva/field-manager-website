@@ -309,6 +309,22 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
   font-size:.86rem;
   line-height:1.65;
 }
+.workflow-detail-list {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:16px;
+}
+.workflow-detail-list span {
+  padding:9px 10px;
+  border:1px solid rgba(143,197,191,.18);
+  border-radius:8px;
+  background:rgba(11,95,90,.1);
+  color:#c6d7d3;
+  font-size:.7rem;
+  font-weight:800;
+  line-height:1.4;
+}
 .workflow-line {
   margin:24px 0 0;
   color:#7f918e;
@@ -331,6 +347,7 @@ h1 { max-width:760px; margin:0; font-size:clamp(3.8rem,6.5vw,7rem); line-height:
   .workflow-card[open] { grid-column:span 1; }
   .workflow-card summary { min-height:0; }
   .workflow-card h3 { margin-top:20px; }
+  .workflow-detail-list { grid-template-columns:1fr; }
   .workflow-line { line-height:1.9; }
 }
 
