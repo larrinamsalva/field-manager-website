@@ -1,4 +1,5 @@
 import BetaSignupForm from "./BetaSignupForm";
+import { jobProofExteriorSrc, jobProofPlumbingSrc } from "./jobProofImages";
 
 export default function Home() {
   const workflow = [
@@ -211,12 +212,29 @@ export default function Home() {
       </section>
 
       <section className="job-proof-section">
-        <figure className="job-proof-photo">
-          <img
-            src="/field-manager-job-photos.webp"
-            alt="Field Manager user reviewing before and after job photos at a completed work site"
-          />
-        </figure>
+        <div className="job-proof-gallery" aria-label="Field Manager before and after job proof examples">
+          <figure className="job-proof-photo">
+            <img
+              src={jobProofExteriorSrc}
+              alt="Field Manager before and after exterior job photos shown side by side on a tablet"
+            />
+            <figcaption>
+              <span>BEFORE → AFTER</span>
+              Exterior job proof
+            </figcaption>
+          </figure>
+
+          <figure className="job-proof-photo">
+            <img
+              src={jobProofPlumbingSrc}
+              alt="Field Manager before and after plumbing job photos shown side by side on a tablet"
+            />
+            <figcaption>
+              <span>BEFORE → AFTER</span>
+              Plumbing job proof
+            </figcaption>
+          </figure>
+        </div>
 
         <div className="job-proof-copy">
           <p className="eyebrow">JOB PROOF</p>
