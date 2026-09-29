@@ -139,7 +139,7 @@ export default function Home() {
 
         <div className="workflow-track">
           {workflow.map(({ number, title, copy, detail }) => (
-            <details className="workflow-card" key={title}>
+            <details className="workflow-card" name="workflow-step" key={title}>
               <summary>
                 <span className="workflow-number">{number}</span>
                 <h3>{title}</h3>
